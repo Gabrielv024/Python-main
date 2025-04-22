@@ -51,18 +51,20 @@
 # else:
 #     print("El alumno reprobo")
 
-clave=3344
+# clave=3344
 
-password=int(input("Ingrese las password :"))
-if password==clave:
-    print("Bienvenido al sistema")
-else:
-    print("Error, clave invalida")
+# password=int(input("Ingrese las password :"))
+# if password==clave:
+#     print("Bienvenido al sistema")
+# else:
+#     print("Error, clave invalida")
 
-    for i in range(3):
-        password=int(input("Ingrese las password :"))
-if password==clave:
-    print("Bienvenido al sistema")
-    break
-else:
-    print("Error, clave invalida")
+#     for i in range(3):
+#         password=int(input("Ingrese las password :"))
+# if password==clave:
+#     print("Bienvenido al sistema")
+#     break
+# else:
+#     print("Error, clave invalida")
+
+cant=int(input("Cuantos productos llevara"))
