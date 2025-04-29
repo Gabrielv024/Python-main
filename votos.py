@@ -77,6 +77,30 @@
 #peleas por turnos, cada uno ataca entre 1 y 10
 #gana el que quita todo el HP al contrincante
 
+# edad=-1
+# while edad<0 or edad>100:
+#     edad=int(input("Ingrese edad :"))
+#     if (edad<0 or edad>100):
+#         print("Error, edad fuera de rango [0,100]")
+    
+# print("Edad ingresada correctamente.") 
+
+#Actividad 1 
+
+num=1
+
+num=int(input("Ingrese un numero "))
+if num%2 ==0:
+    print(f"El numero {num} es impar")
+else:
+     print(f"El numero {num} es par")
+
+
+
+
+
+
+
 
 
 
