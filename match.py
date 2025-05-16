@@ -204,64 +204,182 @@
 #mostrar  el total de articulos comprados
 #definir un precio fijo para cada producto
 
-def menu():
+# def menu():
+#     while True:
+#         print("Bienvenido al carrito de compras")
+#         print("Por favor, elija una opcion:")
+#         print("1.- Ingresar nombre del usuario")
+#         print("2.- Comprar productos")
+#         print("3.- Sacar boleta")
+#         print("4.- Salir")
+#         opcion = input("Ingrese una opcion: ")
+#         match opcion:
+#             case "1":
+#                 nombre = input("Ingrese su nombre: ")
+#                 print(f"Hola {nombre}, bienvenido al carrito de compras") 
+#             case "2":
+#                 print("Productos disponibles:")
+#                 print("1.- Producto 1 - $3000")
+#                 print("2.- Producto 2 - $2400")
+#                 print("3.- Producto 3 - $1250")
+#                 print("4.- Producto 4 - $5000")
+#                 print("5.- Producto 5 - $1500")
+#                 print("6.- Producto 6 - $2000")
+#                 carrito = []
+#                 while True:
+#                     producto = input("Ingrese el numero del producto que desea comprar (o 'salir' para terminar): ")
+#                     if producto == "salir":
+#                         break
+#                     elif producto in ["1", "2", "3", "4", "5", "6"]:
+#                         carrito.append(producto)
+#                         print(f"Agregado {producto} al carrito")
+#                     else:
+#                         print("Producto no valido")
+#             case "3":
+#                 if not carrito:
+#                     print("El carrito esta vacio")
+#                 else:
+#                     total = 0
+#                     for item in carrito:
+#                         if item == "1":
+#                             total += 3000
+#                         elif item == "2":
+#                             total += 2400
+#                         elif item == "3":
+#                             total += 1250
+#                         elif item == "4":
+#                             total += 5000
+#                         elif item == "5":
+#                             total += 1500
+#                         elif item == "6":
+#                             total += 2000
+#                     iva = total * 0.21
+#                     total_con_iva = total + iva
+#                     print(f"Total de articulos comprados: {len(carrito)}")
+#                     print(f"Total sin IVA: ${total}")
+#                     print(f"IVA: ${iva}")
+#                     print(f"Total con IVA: ${total_con_iva}")
+#             case "4":
+#                 print("Hasta luego!")
+#                 break
+#             case _:
+#                 print("Opcion invalida")
+# menu()
+
+# def menu():
+#     while True:
+#         try:
+#             print("Bienvenido/a al carrito de compras!")
+#             print("1.- Ingresar nombre de usuario")
+#             print("2.- Seleccionar productos disponibles")
+#             print("3.- Sacar boleta de precios")
+#             print("4.- Salir")
+#             opcion = input("Seleccione una opcion: ")
+#         except ValueError:
+#             print("Error, seleccione una opcion valida")
+        
+#         match opcion:
+#             case "1":
+#                 nombre = input("Ingrese su nombre ")
+#                 print(f"Hola {nombre}, bienvenido al carrito de compras")
+#             case "2":
+#                 print("Productos disponibles:")
+#                 print("1.- Producto 1 - $3000")
+#                 print("2.- Producto 2 - $2400")
+#                 print("3.- Producto 3 - $1250")
+#                 print("4.- Producto 4 - $5000")
+#                 print("5.- Producto 5 - $1500")
+#                 print("6.- Producto 6 - $2000")
+#                 carrito = []
+#                 while True:
+#                     producto = input("Ingrese el numero del producto que desea comprar (o 'salir' para terminar): ")
+#                     if producto == "salir":
+#                         break
+#                     elif producto in ["1", "2", "3", "4", "5", "6"]:
+#                         carrito.append(producto)
+#                         print(f"Agregado {producto} al carrito")
+#                     else:
+#                         print("Producto no valido")
+#             case "3":
+#                 if not carrito:
+#                     print("El carrito esta vacio")
+#                 else:
+#                     total = 0
+#                     for item in carrito:
+#                         if item == "1":
+#                             total += 3000
+#                         elif item == "2":
+#                             total += 2400
+#                         elif item == "3":
+#                             total += 1250
+#                         elif item == "4":
+#                             total += 5000
+#                         elif item == "5":
+#                             total += 1500
+#                         elif item == "6":
+#                             total += 2000
+#                     iva = total * 0.21
+#                     total_con_iva = total + iva
+#                     print(f"Total de articulos comprados: {len(carrito)}")
+#                     print(f"Total sin IVA: ${total}")
+#                     print(f"IVA: ${iva}")
+#                     print(f"Total con IVA: ${total_con_iva}")
+#             case "4":
+#                 print("Hasta luego!")
+#                 break
+#             case _:
+#                 print("Opcion invalida")
+# menu()
+
+#pedir cantidad de alumnos
+#pedir cantidad de notas por alumno
+#promediar las notas de cada alumno y mostrar si aprobó o no
+# bonus, mostrar el promedio de todos los alumnos ingresados
+# sacar el promedio de cada alumno
+
+while True:
+    try:
+        num_alumnos = int(input("Ingrese la cantidad de alumnos: "))
+        if num_alumnos <= 0:
+            print("La cantidad de alumnos debe ser mayor a 0.")
+            continue
+        break
+    except ValueError:
+        print("Error, ingrese un numero valido.")
+alumnos = []
+for i in range(num_alumnos):
     while True:
-        print("Bienvenido al carrito de compras")
-        print("Por favor, elija una opcion:")
-        print("1.- Ingresar nombre del usuario")
-        print("2.- Comprar productos")
-        print("3.- Sacar boleta")
-        print("4.- Salir")
-        opcion = input("Ingrese una opcion: ")
-        match opcion:
-            case "1":
-                nombre = input("Ingrese su nombre: ")
-                print(f"Hola {nombre}, bienvenido al carrito de compras") 
-            case "2":
-                print("Productos disponibles:")
-                print("1.- Producto 1 - $3000")
-                print("2.- Producto 2 - $2400")
-                print("3.- Producto 3 - $1250")
-                print("4.- Producto 4 - $5000")
-                print("5.- Producto 5 - $1500")
-                print("6.- Producto 6 - $2000")
-                carrito = []
-                while True:
-                    producto = input("Ingrese el numero del producto que desea comprar (o 'salir' para terminar): ")
-                    if producto == "salir":
-                        break
-                    elif producto in ["1", "2", "3", "4", "5", "6"]:
-                        carrito.append(producto)
-                        print(f"Agregado {producto} al carrito")
-                    else:
-                        print("Producto no valido")
-            case "3":
-                if not carrito:
-                    print("El carrito esta vacio")
-                else:
-                    total = 0
-                    for item in carrito:
-                        if item == "1":
-                            total += 3000
-                        elif item == "2":
-                            total += 2400
-                        elif item == "3":
-                            total += 1250
-                        elif item == "4":
-                            total += 5000
-                        elif item == "5":
-                            total += 1500
-                        elif item == "6":
-                            total += 2000
-                    iva = total * 0.21
-                    total_con_iva = total + iva
-                    print(f"Total de articulos comprados: {len(carrito)}")
-                    print(f"Total sin IVA: ${total}")
-                    print(f"IVA: ${iva}")
-                    print(f"Total con IVA: ${total_con_iva}")
-            case "4":
-                print("Saliendo...")
+        try:
+            num_notas = int(input(f"Ingrese la cantidad de notas para el alumno {i + 1}: "))
+            if num_notas <= 0:
+                print("La cantidad de notas debe ser mayor a 0.")
+                continue
+            break
+        except ValueError:
+            print("Error, ingrese un numero valido.")
+    notas = []
+    for j in range(num_notas):
+        while True:
+            try:
+                nota = float(input(f"Ingrese la nota {j + 1} del alumno {i + 1}: "))
+                if nota < 0 or nota > 7:
+                    print("La nota debe estar entre 0 y 7.")
+                    continue
                 break
-            case _:
-                print("Opcion invalida")
-menu()
+            except ValueError:
+                print("Error, ingrese una nota valida.")
+        notas.append(nota)
+    alumnos.append(notas)
+promedios = []
+for i, notas in enumerate(alumnos):
+    promedio = sum(notas) / len(notas)
+    promedios.append(promedio)
+    if promedio >= 4:
+        print(f"El alumno {i + 1} aprobó con un promedio de {promedio:.2f}.")
+    else:
+        print(f"El alumno {i + 1} no aprobó con un promedio de {promedio:.2f}.")
+promedio_general = sum(promedios) / len(promedios)
+print(f"El promedio general de todos los alumnos es: {promedio_general:.2f}.")
+
+
+
